@@ -1,0 +1,29 @@
+
+entry class
+This class is nested inside the hash table class, which means it’s ony accessible from inside the hash table. It does exactly the same the struct nodes we were using inside a linked list, but let’s us stop ourselves from altering user data.
+Attributes
+
+	•	username – a username, saved as a string.
+	•	salt – a string for the user’s password salt.
+	•	hashedpwd – the user’s hashed password. Remember, this isn’t plain text, it has been hashed already.
+	•	next – a pointer to the next entry in the bucket. This is a public attribute (but is only accessible to the hash table, since it’s in a private class).
+public Functions
+
+Function name:  entry constructor 
+	•	Parameters: three strings, one for each attribute
+	•	Purpose:  assigns each attribute to the given parameter, and sets the next pointer to null.
+
+Function name:  getUsername
+	•	Parameters: no parameters
+	•	Returns:  string
+Purpose:  returns the username
+
+Function name:  getSalt
+	•	Parameters: no parameters
+	•	Returns:  string
+Purpose:  returns the salt for hashing the password
+
+Function name:  getHashedpwd
+	•	Parameters: no parameters
+	•	Returns:  string
+	•	Purpose:  returns the hashed password
